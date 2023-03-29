@@ -3,7 +3,6 @@ var video;
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
 	video =  document.getElementById('player1');
-	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + '%';
 	video.autoplay = false;
     video.loop = false;
 });
@@ -11,6 +10,7 @@ window.addEventListener("load", function() {
  document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play Video");
 	video.play();
+	video.volume = document.querySelector("#slider").value / 100;
 	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + '%';
  });
 
