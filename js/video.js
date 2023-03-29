@@ -11,12 +11,12 @@ window.addEventListener("load", function() {
  document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play Video");
 	video.play();
+	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + '%';
  });
 
  document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
-	video.pause();
-	document.querySelector("#volume").innerHTML = document.querySelector("#slider").value + '%';
+	video.pause();	
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
